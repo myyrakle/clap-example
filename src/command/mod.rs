@@ -1,5 +1,5 @@
-mod login;
-mod logout;
+pub mod login;
+pub mod logout;
 
 use clap::Parser;
 

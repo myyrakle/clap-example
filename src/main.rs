@@ -1,3 +1,4 @@
+mod action;
 mod command;
 
 use clap::Parser;
@@ -7,10 +8,10 @@ fn main() {
 
     match _args.action {
         command::SubCommand::Login(login) => {
-            println!("{:?}", login);
+            action::login::run(login.value);
         }
         command::SubCommand::Logout(logout) => {
-            println!("{:?}", logout);
+            action::logout::run(logout.value);
         }
     }
 }
